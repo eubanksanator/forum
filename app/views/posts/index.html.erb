@@ -1,8 +1,7 @@
-<h1>this is index folder</h1>
 
 
 <% @posts.each do |post| %>
- <h3><%= post.title %></h3>
+ <h2><%= link_to post.title, post_path(post) %></h2>
   <p>Published <%= time_ago_in_words(post.created_at) %></p>
 <% end %>
 
