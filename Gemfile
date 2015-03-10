@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'omniauth-twitter'
-gem 'simple_form'
+gem 'omniauth-facebook'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
