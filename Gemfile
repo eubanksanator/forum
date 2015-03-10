@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+#Styleing from bootstrap
+gem 'bootstrap-sass'
+
+#Font-Awsesome enable
+gem 'font-awesome-sass'
+
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
