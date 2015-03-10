@@ -1,3 +1,5 @@
+
+config.omniauth :facebook, "1562197660710482", "6afda3708f06bae753915d73c16cbb6d"
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
