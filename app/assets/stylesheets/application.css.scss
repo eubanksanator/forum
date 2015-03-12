@@ -22,7 +22,8 @@
 body  {
   background-color: #F5F0F0;
 }
-.navbar-default, .well {
+
+.navbar-default, .well{
   background-color: white;
   padding: 10px;
 }
@@ -30,4 +31,25 @@ body  {
 h2  {
   margin-bottom: .25rem;
   color: #ABD6DB;
+}
+
+.post {
+  color: red;
+  padding: 35px;
+  a {
+    text-decoration: none;
+  }
+}
+
+.post-content {
+  padding: 35px;
+  h2 {
+    color: red;
+    padding-bottom: 20px;
+  }
+    p  {
+      color: gray;
+      font-size: 16px;
+      line-height: 1.5em;
+    }
 }

@@ -1,9 +1,11 @@
-<div class="col-md-offset-2 col-md-8 well">
-  <% @posts.each do |post| %>
-   <h2><%= link_to post.title, post_path(post) %></h2>
-    <p>Published <%= time_ago_in_words(post.created_at) %></p>
-    <p>BY: <%= post.user.email %></p><hr>
-  <% end %>
+<div class="col-md-10 well">
+  <div class="post">
+    <% @posts.each do |post| %>
+    <h2><%= link_to post.title.titleize, post_path(post) %></h2>
+    <p>Published <%= time_ago_in_words(post.created_at) %> by <%= post.user.email %></p>
+    <hr>
+    <% end %>
 
-  <%= link_to "New Post", new_post_path %>
+    <%= link_to "New Post", new_post_path %>
+  </div>
 </div>
