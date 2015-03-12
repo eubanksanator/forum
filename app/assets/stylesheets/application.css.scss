@@ -20,14 +20,44 @@
   @import "bootstrap";
 
 body  {
-  background-color: #F5F0F0;
+  background-color: #F3F3F3;
 }
-.navbar-default, .well {
+.navbar-default {
   background-color: white;
   padding: 10px;
+  color: black;
 }
 
-h2  {
-  margin-bottom: .25rem;
-  color: #ABD6DB;
+.post {
+  background-color: white;
+  padding: 20px;
+  border-radius: .9em;
 }
+
+.post-title, a {
+  font-family: 'Cambay', sans-serif;
+  letter-spacing: -.07em;
+  margin-bottom: 0;
+  color: #0000FF;
+
+}
+
+strong {
+  font-size: 12px;
+}
+
+hr {
+  margin: 40px 0px;
+}
+
+.navbar-default .navbar-brand  {
+  font-size: 25px;
+  color: black;
+  font-weight: 20px;
+}
+.nav  {
+  color: black;
+  font-size: 20px;
+}
+
+
