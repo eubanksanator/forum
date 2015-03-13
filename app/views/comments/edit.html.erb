@@ -1,0 +1,10 @@
+<h1>Edit Comment</h1>
+
+<%= form_for([@post, @comment]) do |f| %>
+<!-- Were not creating a new comment, were updating a current comment, we prepopulate with its current content. -->
+<!-- ([what parent are we targeting, what child are we targeting]) -->
+  <%= f.label :comment %>
+  <%= f.text_area :comment %>
+  <%= f.submit %>
+<% end %>
+
