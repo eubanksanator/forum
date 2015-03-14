@@ -3,21 +3,22 @@
     <div class="post-content">
       <h2><%= @post.title.titleize %></h2>
       <p><%= @post.content %></p>
-
       <div id="comments">
-        <h2><%= pluralize(@post.comments.count, 'comment') %></h2>
+        <h4><%= pluralize(@post.comments.count, 'comment') %></h4>
         <%= render @post.comments %>
-      <!-- ^^^^^^^^^?????????????^^^^^^^^^^^^^^^^-->
-        <h3>Reply to thread</h3>
-        <%= render 'comments/form' %>
-      <!--  ^^^renders the _form inside views>comments>_form.html.erb.......absolute path-->
-      </div>
+        <!-- ^^^^^^^^^?????????????^^^^^^^^^^^^^^^^-->
 
-      <% if current_user.id == @post.user_id  %>
-        <%= link_to 'Edit', edit_post_path(@post) %>
-        <%= link_to 'Delete', post_path(@post), method: :delete, data: {confirm: "Are you sure?"} %>
-        <%= link_to 'Home', root_path %>
-      <% end %>
-    </div>
-  </div>
-</div>
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+           <h3>Reply to thread</h3>
+           <%= render 'comments/form' %>
+           <!--  ^^^renders the _form inside views>comments>_form.html.erb.......absolute path-->
+           <% if current_user.id == @post.user_id  %>
+           <%= link_to 'Edit', edit_post_path(@post) %>
+           <%= link_to 'Delete', post_path(@post), method: :delete, data: {confirm: "Are you sure?"} %>
+           <%= link_to 'Home', root_path %>
+           <% end %>
+         </div>
+       </div>
+     </div>

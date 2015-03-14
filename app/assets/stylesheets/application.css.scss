@@ -21,11 +21,21 @@
 
 body  {
   background-color: #F5F0F0;
+  padding-bottom: 70px;
 }
 
-.navbar-default, .well{
+.navbar-default, .well, .navbar-fixed-top{
   background-color: white;
-  padding: 10px;
+  padding: 10px 10px 0 10px;
+}
+
+.right-navbar-links {
+    a  {
+  text-decoration: none;
+    }
+    li {
+      list-style-type: none;
+    }
 }
 
 h2  {
