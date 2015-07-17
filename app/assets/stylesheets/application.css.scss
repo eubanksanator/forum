@@ -63,3 +63,15 @@ h2  {
       line-height: 1.5em;
     }
 }
+
+
+
+#comment-box  {
+  margin-bottom: 10px;
+  padding: 10px;
+  opacity: .6;
+}
+#comment-box p:hover  {
+  opacity: 1.0;
+  color: green;
+}

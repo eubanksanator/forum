@@ -5,8 +5,11 @@
       <p><%= @post.content %></p>
       <div id="comments">
         <h4><%= pluralize(@post.comments.count, 'comment') %></h4>
-        <%= render @post.comments %>
-        <!-- ^^^^^^^^^?????????????^^^^^^^^^^^^^^^^-->
+        <div class="all-comment-box">
+          <%= render @post.comments %>
+          <!-- ^^^^^^^^^?????????????^^^^^^^^^^^^^^^^-->
+
+        </div>
 
 
         <div class="panel panel-default">
