@@ -1,9 +1,30 @@
 <div class="col-md-10 well">
-  <div class="post">
-    <% @posts.each do |post| %>
-    <h2><%= link_to post.title.titleize, post_path(post) %></h2>
-    <p>Published <%= time_ago_in_words(post.created_at) %> by <%= post.user.email %></p>
-    <hr>
-    <% end %>
+ <div class="post">
+  <% @posts.each do |post| %>
+  <div class="pull-right">
+     <h6>Like <b><%= post.get_upvotes.size %></b></h6>
+     <h6>Dislike <b><%= post.get_downvotes.size %></b></h6>
   </div>
+
+  <div class="row">
+     <h2><%= link_to post.title.titleize, post_path(post) %></h2>
+     <p>Published <%= time_ago_in_words(post.created_at) %> by <%= post.user.email %></p>
+      <%= button_to "Upvote", like_post_path(post), method: :put, class: "pull-left" %>
+      <%= button_to "Downvote", dislike_post_path(post), method: :put %>
+
+     <div class="pull-right">
+      <% if current_user.voted_for?(post) %>
+      <% if current_user.voted_as_when_voted_for post  %>
+      <p>You liked this
+      <% else %>
+      You disliked this</p>
+      <% end %>
+      <% end %>
+   </div>
+</div>
+
+<hr>
+<% end %>
+
+</div>
 </div>
