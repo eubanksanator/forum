@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.2.0'
-
+gem 'acts_as_votable', '~> 0.10.0'
 #Styleing from bootstrap
 gem 'bootstrap-sass'
 
