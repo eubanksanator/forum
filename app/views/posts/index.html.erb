@@ -13,11 +13,12 @@
       <%= button_to "Downvote", dislike_post_path(post), method: :put %>
 
      <div class="pull-right">
-      <% if current_user.voted_for?(post) %>
+     <% if user_signed_in? %>
       <% if current_user.voted_as_when_voted_for post  %>
       <p>You liked this
       <% else %>
       You disliked this</p>
+
       <% end %>
       <% end %>
    </div>
